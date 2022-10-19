@@ -94,7 +94,7 @@ class PostController extends Controller
     {
 
         $client = new Client();
-        $response = $client->request('GET', 'http://localhost:8080/api/posts-all');
+        $response = $client->request('GET', 'http://localhost:8080/api/posts-all'); //la url reemplazar por una constante PROVIDER_URL en el .env
         $statusCode = $response->getStatusCode();
         $body = $response->getBody()->getContents();
 
