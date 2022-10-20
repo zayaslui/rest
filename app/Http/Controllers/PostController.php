@@ -92,15 +92,7 @@ class PostController extends Controller
      */
     public function obtenerPosts()
     {
-
-        $client = new Client();
-        $response = $client->request('GET', 'http://localhost:8080/api/posts-all');
-        $statusCode = $response->getStatusCode();
-        $body = $response->getBody()->getContents();
-
-        //return json_decode($body);// returns an object
-        return json_decode($body,true);// returns an array
-        //return $body;
+        return Post::all();        
     }
 
 }
