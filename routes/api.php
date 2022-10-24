@@ -44,5 +44,6 @@ Route::post('/client/posts', function (Request $request) {
 })->middleware('client');
 
 
-Route::get('/obtenerPosts', [App\Http\Controllers\PostController::class, 'obtenerPosts']);
-
+Route::group(['prefix' => 'rest'], function () {
+    Route::get('/obtenerPosts', [App\Http\Controllers\PostController::class, 'obtenerPosts']);
+});

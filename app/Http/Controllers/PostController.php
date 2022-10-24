@@ -92,7 +92,7 @@ class PostController extends Controller
      */
     public function obtenerPosts()
     {
-        return Post::all();        
+        return Post::all();
     }
 
 }
